@@ -43,8 +43,7 @@ export const Formulario = ({ busqueda, guardarBusqueda }) => {
              ? 
             <p className="red darken-4">Todos los campos son obligatorios</p>
              :
-              null
-
+          null
         }  
     
         <div className="input-field col s12">
@@ -57,30 +56,32 @@ export const Formulario = ({ busqueda, guardarBusqueda }) => {
              />
             <label htmlFor="ciudad">Ciudad:</label>
         </div>
-
-        <label htmlFor="paies">Pais</label>
-        <select
-         name="pais"
-         className="browser-default"
-         id="pais"
-         value={pais}
-         onChange={handleChange}
-         >
-            <option value="disabled selected">--Selecione un pais</option>
-            <option value="AR">Argentina</option>
-            <option value="US">Estados Unidos</option>
-            <option value="CO">Colombia</option>
-            <option value="ES">España</option>
-            <option value="PE">Perú</option>
-        </select>
+        
+        <div className="input-field col s12">
+                <select
+                className="browser-default"
+                name="pais"
+                id="pais"
+                value={pais}
+                onChange={handleChange}
+                >
+                    <option value="disabled selected">--Selecione un Pais--</option>
+                    <option value="AR">Argentina</option>
+                    <option value="US">Estados Unidos</option>
+                    <option value="CO">Colombia</option>
+                    <option value="ES">España</option>
+                    <option value="PE">Perú</option>
+                </select>
+            <label htmlFor="pais"></label>
+        </div>
 
         <div className="input-field col s12">
-        <input
-            className="waves-effect waves-light btn-large btn-block yellow accent-4"
-            type="submit"
-            value="Buscar Clima"
-         />
-        </div>
+                <input  
+                    type="submit"
+                    value="Buscar Clima"
+                    className="waves-effect waves-light btn-large btn-block yellow accent-4"
+                />
+            </div>
     </form>
   )
 }

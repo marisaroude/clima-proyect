@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { Formulario } from "./components/Formulario"
 import { Header } from "./components/Header"
-import './App.css'
+
 
 function App() {
 
@@ -26,18 +26,20 @@ function App() {
           />
 
           <div className="container-form">
-            <div className="container">
-              <div className="col m6 s12">
-                <Formulario 
-                  busqueda={busqueda}
-                  guardarBusqueda={guardarBusqueda}
-                />
+              <div className="container">
+                  <div className="row">
+                      <div className="col m6 s12">
+                          <Formulario 
+                            busqueda={busqueda}
+                            guardarBusqueda={guardarBusqueda}
+                       
+                          />
+                      </div>
+                      <div className="col m6 s12">
+                       Contenedor cards
+                      </div>
+                  </div>
               </div>
-
-              <div className="col m6 s12">
-                columna 2
-              </div>
-            </div>
           </div>
         </>
   )
