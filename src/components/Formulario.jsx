@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export const Formulario = ({ busqueda, guardarBusqueda }) => {
+export const Formulario = ({ busqueda, guardarBusqueda, guardarConsulta}) => {
 
 
     // hook error
@@ -31,7 +31,10 @@ export const Formulario = ({ busqueda, guardarBusqueda }) => {
 
         guardarError(false)
 
+        guardarConsulta(true)
+
         // pasarlo al componente principal
+
     }
 
 
