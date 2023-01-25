@@ -16,22 +16,23 @@ function App() {
   const [resultado, guardarResultado] = useState({})
 
   const {ciudad, pais } = busqueda
-
+  
   useEffect(() => {
     const consultarApi = async () =>{
-      const appID = '093cdb1463ea4f36a20f959af9143e38'
+      const appID = '469b362c5f74737b77e3d8fc8aa2d1a0'
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appID}&units=metric`
 
       const respuesta = await fetch (url)
       const resultado = await respuesta.json()
       guardarResultado(resultado)
+
     }
-    
     consultarApi();
+    
     //funcion async nos tiene q devolver un result dentro de esta funcion
     //probar un console log. dentro de app tengo q ver la info de postman
-  }, [consultar])
-
+  }, [consultar]
+  )
   return (
     
         <>
@@ -51,7 +52,8 @@ function App() {
                       </div>
                       <div className="col m6 s12">
                         <Clima
-                        resultado={resultado}
+                          resultado={resultado}
+
                         />
                       </div>
                   </div>

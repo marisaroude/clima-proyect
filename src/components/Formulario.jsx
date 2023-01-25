@@ -33,6 +33,10 @@ export const Formulario = ({ busqueda, guardarBusqueda, guardarConsulta}) => {
 
         guardarConsulta(true)
 
+        console.log(ciudad)
+        console.log(pais)
+        console.log(busqueda)
+  
         // pasarlo al componente principal
 
     }

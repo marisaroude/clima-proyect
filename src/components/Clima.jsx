@@ -1,9 +1,9 @@
 import React from 'react'
 
 export const Clima = ({resultado}) => {
-    const {name,wind,main} = resultado
+  const {name, wind, main} = resultado
 
-    if(!name) return null 
+  if(!name) return null 
 
 
     //agregar logica de vaciar el form
@@ -13,7 +13,10 @@ export const Clima = ({resultado}) => {
         <div className='black-text'>
            <h2>El clima de { name } es: </h2>
            <p className='temperatura'>
-               {main.temp} C°
+              {main.temp} C°
+              <p></p>
+              <h2>Viento:</h2>
+              {wind.speed} km/h
            </p>
         </div>
     </div>
